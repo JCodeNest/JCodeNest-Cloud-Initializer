@@ -16,7 +16,7 @@
     <dependencies>
         <!-- 通用基础定义 -->
         <dependency>
-            <groupId>cn.jcodenest.wiki</groupId>
+            <groupId>cn.jcodenest.initializer</groupId>
             <artifactId>jcode-common</artifactId>
         </dependency>
 

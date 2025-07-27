@@ -1,5 +1,7 @@
 package cn.jcodenest.initializer.common.exception;
 
+import cn.jcodenest.initializer.common.exception.enums.GlobalErrorCodeConstants;
+import cn.jcodenest.initializer.common.exception.enums.ServiceErrorCodeRange;
 import lombok.Data;
 
 /**

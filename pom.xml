@@ -36,7 +36,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>cn.jcodenest.wiki</groupId>
+                <groupId>cn.jcodenest.initializer</groupId>
                 <artifactId>jcode-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>

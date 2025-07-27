@@ -410,7 +410,7 @@
             <!-- ======================== 工具类相关 ======================== -->
             <!-- 通用模块 -->
             <dependency>
-                <groupId>cn.jcodenest.wiki</groupId>
+                <groupId>cn.jcodenest.initializer</groupId>
                 <artifactId>jcode-common</artifactId>
                 <version>${revision}</version>
             </dependency>
