@@ -30,6 +30,7 @@
 
     <modules>
         <module>jcode-dependencies</module>
+        <module>jcode-framework</module>
     </modules>
 
     <dependencyManagement>
