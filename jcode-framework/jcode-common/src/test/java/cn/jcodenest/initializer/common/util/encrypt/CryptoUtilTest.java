@@ -1,5 +1,7 @@
 package cn.jcodenest.initializer.common.util.encrypt;
 
+import cn.jcodenest.framework.common.util.encrypt.CryptoUtil;
+
 import java.util.Scanner;
 
 /**
