@@ -37,11 +37,17 @@
         </dependency>
 
         <!-- 加解密 -->
-        <!-- Spring Boot Security -->
+        <!-- Jasypt 加密 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- Bouncy Castle 加密库 (支持SM2等国密算法) -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk18on</artifactId>
         </dependency>
 
         <!-- 生成自定义 Spring @ConfigurationProperties 配置类说明文件 -->
@@ -160,6 +166,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
