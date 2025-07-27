@@ -1,5 +1,8 @@
 package cn.jcodenest.wiki.common.constants;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * RPC 常量
  *
@@ -10,32 +13,33 @@ package cn.jcodenest.wiki.common.constants;
  * Copyright (c) 2025 JCodeNest-Cloud-Initializer
  * All rights reserved.
  */
-public interface RpcConstants {
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public final class RpcConstants {
 
     /**
      * RPC API 前缀
      */
-    String RPC_API_PREFIX = "/rpc-api";
+    public static final String RPC_API_PREFIX = "/rpc-api";
 
     /**
      * system 服务名
      * 注意: 需要保证和 spring.application.name 保持一致
      */
-    String SYSTEM_NAME = "system-server";
+    public static final String SYSTEM_NAME = "system-server";
 
     /**
      * system 服务的前缀
      */
-    String SYSTEM_PREFIX = RPC_API_PREFIX + "/system";
+    public static final String SYSTEM_PREFIX = RPC_API_PREFIX + "/system";
 
     /**
      * infra 服务名
      * 注意: 需要保证和 spring.application.name 保持一致
      */
-    String INFRA_NAME = "infra-server";
+    public static final String INFRA_NAME = "infra-server";
 
     /**
      * infra 服务的前缀
      */
-    String INFRA_PREFIX = RPC_API_PREFIX + "/infra";
+    public static final String INFRA_PREFIX = RPC_API_PREFIX + "/infra";
 }
