@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.jcodenest.wiki</groupId>
+    <groupId>cn.jcodenest.initializer</groupId>
     <artifactId>jcode-dependencies</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
@@ -408,6 +408,13 @@
             </dependency>
 
             <!-- ======================== 工具类相关 ======================== -->
+            <!-- 通用模块 -->
+            <dependency>
+                <groupId>cn.jcodenest.wiki</groupId>
+                <artifactId>jcode-common</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
             <!-- Lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
