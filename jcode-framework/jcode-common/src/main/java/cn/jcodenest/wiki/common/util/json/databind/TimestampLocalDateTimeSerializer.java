@@ -35,7 +35,7 @@ public class TimestampLocalDateTimeSerializer extends JsonSerializer<LocalDateTi
 
     /**
      * 默认时区：Asia/Shanghai
-     * 使用固定时区而不是系统默认时区，确保在不同环境下的一致性
+     * 使用固定时区而不是系统默认时区, 确保在不同环境下的一致性
      */
     private static final ZoneId DEFAULT_ZONE_ID = ZoneId.of("Asia/Shanghai");
 
@@ -64,7 +64,7 @@ public class TimestampLocalDateTimeSerializer extends JsonSerializer<LocalDateTi
             long timestamp = value.atZone(DEFAULT_ZONE_ID).toInstant().toEpochMilli();
             gen.writeNumber(timestamp);
         } catch (Exception e) {
-            // 如果转换失败，写入 null 值
+            // 如果转换失败, 写入 null 值
             gen.writeNull();
         }
     }

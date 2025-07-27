@@ -46,7 +46,7 @@ public class EncryptUtils {
      * MD5加密
      *
      * @param data 原始数据
-     * @return MD5加密后的字符串，加密失败返回null
+     * @return MD5加密后的字符串, 加密失败返回null
      */
     public static String md5(String data) {
         if (StringUtils.isBlank(data)) {
@@ -66,7 +66,7 @@ public class EncryptUtils {
      *
      * @param data 原始数据
      * @param salt 盐值
-     * @return MD5加密后的字符串，加密失败返回null
+     * @return MD5加密后的字符串, 加密失败返回null
      */
     public static String md5WithSalt(String data, String salt) {
         if (StringUtils.isBlank(data)) {
@@ -81,7 +81,7 @@ public class EncryptUtils {
      * SHA256加密
      *
      * @param data 原始数据
-     * @return SHA256加密后的字符串，加密失败返回null
+     * @return SHA256加密后的字符串, 加密失败返回null
      */
     public static String sha256(String data) {
         if (StringUtils.isBlank(data)) {
@@ -101,7 +101,7 @@ public class EncryptUtils {
      *
      * @param data 原始数据
      * @param salt 盐值
-     * @return SHA256加密后的字符串，加密失败返回null
+     * @return SHA256加密后的字符串, 加密失败返回null
      */
     public static String sha256WithSalt(String data, String salt) {
         if (StringUtils.isBlank(data)) {
@@ -116,7 +116,7 @@ public class EncryptUtils {
      * BCrypt密码加密
      *
      * @param password 原始密码
-     * @return BCrypt加密后的密码，加密失败返回null
+     * @return BCrypt加密后的密码, 加密失败返回null
      */
     public static String bcryptEncode(String password) {
         if (StringUtils.isBlank(password)) {
@@ -136,7 +136,7 @@ public class EncryptUtils {
      *
      * @param rawPassword     原始密码
      * @param encodedPassword 加密后的密码
-     * @return true-验证通过，false-验证失败
+     * @return true-验证通过, false-验证失败
      */
     public static boolean bcryptMatches(String rawPassword, String encodedPassword) {
         if (StringUtils.isBlank(rawPassword) || StringUtils.isBlank(encodedPassword)) {
@@ -156,7 +156,7 @@ public class EncryptUtils {
      *
      * @param data 原始数据
      * @param key  密钥
-     * @return AES加密后的Base64字符串，加密失败返回null
+     * @return AES加密后的Base64字符串, 加密失败返回null
      */
     public static String aesEncrypt(String data, String key) {
         if (StringUtils.isBlank(data) || StringUtils.isBlank(key)) {
@@ -181,7 +181,7 @@ public class EncryptUtils {
      *
      * @param encryptedData 加密后的Base64字符串
      * @param key           密钥
-     * @return AES解密后的字符串，解密失败返回null
+     * @return AES解密后的字符串, 解密失败返回null
      */
     public static String aesDecrypt(String encryptedData, String key) {
         if (StringUtils.isBlank(encryptedData) || StringUtils.isBlank(key)) {
@@ -206,7 +206,7 @@ public class EncryptUtils {
      * AES加密（使用默认密钥）
      *
      * @param data 原始数据
-     * @return AES加密后的Base64字符串，加密失败返回null
+     * @return AES加密后的Base64字符串, 加密失败返回null
      */
     public static String aesEncrypt(String data) {
         return aesEncrypt(data, EncryptConstants.AES_KEY);
@@ -216,7 +216,7 @@ public class EncryptUtils {
      * AES解密（使用默认密钥）
      *
      * @param encryptedData 加密后的Base64字符串
-     * @return AES解密后的字符串，解密失败返回null
+     * @return AES解密后的字符串, 解密失败返回null
      */
     public static String aesDecrypt(String encryptedData) {
         return aesDecrypt(encryptedData, EncryptConstants.AES_KEY);
@@ -289,7 +289,7 @@ public class EncryptUtils {
     /**
      * 生成AES密钥
      *
-     * @return AES密钥的Base64字符串，生成失败返回null
+     * @return AES密钥的Base64字符串, 生成失败返回null
      */
     public static String generateAESKey() {
         try {
@@ -308,7 +308,7 @@ public class EncryptUtils {
      *
      * @param data      原始数据
      * @param algorithm 哈希算法
-     * @return 哈希值的十六进制字符串，计算失败返回null
+     * @return 哈希值的十六进制字符串, 计算失败返回null
      */
     public static String hash(String data, String algorithm) {
         if (StringUtils.isBlank(data) || StringUtils.isBlank(algorithm)) {
@@ -340,7 +340,7 @@ public class EncryptUtils {
      * @param data         原始数据
      * @param expectedHash 期望的哈希值
      * @param algorithm    哈希算法
-     * @return true-验证通过，false-验证失败
+     * @return true-验证通过, false-验证失败
      */
     public static boolean verifyHash(String data, String expectedHash, String algorithm) {
         if (StringUtils.isBlank(data) || StringUtils.isBlank(expectedHash) || StringUtils.isBlank(algorithm)) {
