@@ -32,7 +32,7 @@ public interface WebFilterOrderConstants {
      */
     int REQUEST_BODY_CACHE_FILTER = Integer.MIN_VALUE + 500;
 
-    // OrderedRequestContextFilter 默认为 -105，用于国际化上下文等等
+    // OrderedRequestContextFilter 默认为 -105, 用于国际化上下文等等
 
     /**
      * 租户上下文过滤器顺序

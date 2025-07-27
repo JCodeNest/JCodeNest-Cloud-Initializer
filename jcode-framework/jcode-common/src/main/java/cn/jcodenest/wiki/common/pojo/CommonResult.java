@@ -119,7 +119,7 @@ public class CommonResult<T> implements Serializable {
 
     /**
      * 将传入的 result 对象转换成另外一个泛型结果的对象
-     * 使用场景：A 方法返回的 CommonResult 对象，不满足调用其的 B 方法的返回，则需要进行转换
+     * 使用场景：A 方法返回的 CommonResult 对象, 不满足调用其的 B 方法的返回, 则需要进行转换
      *
      * @param result 传入的 result 对象
      * @param <T>    返回的泛型

@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
-    <description>基础 BOM 文件，管理整个项目的依赖版本</description>
+    <description>基础 BOM 文件, 管理整个项目的依赖版本</description>
     <url>https://github.com/JCodeNest/JCodeNest-Cloud-Initializer</url>
 
     <properties>
@@ -185,7 +185,7 @@
 
             <!-- MyBatis 套件 -->
             <dependency>
-                <!-- 注意：必须声明，避免 flowable 和 mybatis-plus 引入的 mybatis 版本不一致 -->
+                <!-- 注意：必须声明, 避免 flowable 和 mybatis-plus 引入的 mybatis 版本不一致 -->
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
                 <version>${mybatis.version}</version>
@@ -378,14 +378,14 @@
                 </exclusions>
             </dependency>
 
-            <!-- 单元测试，采用内嵌的 Redis 数据库 -->
+            <!-- 单元测试, 采用内嵌的 Redis 数据库 -->
             <dependency>
                 <groupId>com.github.fppt</groupId>
                 <artifactId>jedis-mock</artifactId>
                 <version>${jedis-mock.version}</version>
             </dependency>
 
-            <!-- 单元测试，随机生成 POJO 类 -->
+            <!-- 单元测试, 随机生成 POJO 类 -->
             <dependency>
                 <groupId>uk.co.jemos.podam</groupId>
                 <artifactId>podam</artifactId>
@@ -498,7 +498,7 @@
                 <version>${jsch.version}</version>
             </dependency>
 
-            <!-- 验证码，一般用于登录使用 -->
+            <!-- 验证码, 一般用于登录使用 -->
             <dependency>
                 <groupId>com.anji-plus</groupId>
                 <artifactId>captcha-spring-boot-starter</artifactId>

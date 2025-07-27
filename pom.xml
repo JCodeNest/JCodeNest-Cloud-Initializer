@@ -48,14 +48,14 @@
     <build>
         <pluginManagement>
             <plugins>
-                <!-- maven-surefire-plugin 插件，解决单元测试问题 -->
+                <!-- maven-surefire-plugin 插件, 解决单元测试问题 -->
                 <!-- Version > 3.0.x+ 支持 Junit5 -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven-surefire-plugin.version}</version>
                 </plugin>
-                <!-- maven-compiler-plugin 插件，解决 Lombok + MapStruct 组合 -->
+                <!-- maven-compiler-plugin 插件, 解决 Lombok + MapStruct 组合 -->
                 <!-- https://stackoverflow.com/questions/33483697/re-run-spring-boot-configuration-annotation-processor-to-update-generated-metada -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -88,7 +88,7 @@
                                 <version>${mapstruct.version}</version>
                             </path>
                         </annotationProcessorPaths>
-                        <!-- 编译参数写在 arg 内，解决 Spring Boot 3.2 的 Parameter Name Discovery 问题 -->
+                        <!-- 编译参数写在 arg 内, 解决 Spring Boot 3.2 的 Parameter Name Discovery 问题 -->
                         <debug>false</debug>
                         <compilerArgs>
                             <arg>-parameters</arg>

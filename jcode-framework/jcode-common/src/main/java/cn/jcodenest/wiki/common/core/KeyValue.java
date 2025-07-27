@@ -1,5 +1,9 @@
 package cn.jcodenest.wiki.common.core;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 /**
@@ -12,6 +16,9 @@ import java.io.Serializable;
  * Copyright (c) 2025 JCodeNest-Cloud-Initializer
  * All rights reserved.
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class KeyValue<K, V> implements Serializable {
 
     /**

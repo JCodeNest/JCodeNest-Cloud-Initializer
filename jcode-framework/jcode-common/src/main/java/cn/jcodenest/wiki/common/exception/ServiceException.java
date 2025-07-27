@@ -30,7 +30,7 @@ public class ServiceException extends RuntimeException {
     private String message;
 
     /**
-     * 空构造方法，避免反序列化问题
+     * 空构造方法, 避免反序列化问题
      */
     public ServiceException() {
     }

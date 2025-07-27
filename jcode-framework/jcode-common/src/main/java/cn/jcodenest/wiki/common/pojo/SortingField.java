@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * 排序字段
- * 备注：类名加了 ing，避免和 ES 的 SortField 重名
+ * 备注：类名加了 ing, 避免和 ES 的 SortField 重名
  *
  * @author JCodeNest
  * @version 1.0.0
