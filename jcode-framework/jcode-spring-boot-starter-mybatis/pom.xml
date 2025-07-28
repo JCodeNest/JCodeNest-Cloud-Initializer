@@ -22,8 +22,8 @@
 
         <!-- Web 相关 -->
         <dependency>
-            <groupId>cn.iocoder.cloud</groupId>
-            <artifactId>yudao-spring-boot-starter-security</artifactId>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-security</artifactId>
             <scope>provided</scope>
         </dependency>
 

@@ -159,6 +159,19 @@
             </dependency>
 
             <!-- ======================== Spring 相关 ======================== -->
+            <!-- JCode Spring Boot Web: Web 框架封装 -->
+            <dependency>
+                <groupId>cn.jcodenest.initializer</groupId>
+                <artifactId>jcode-spring-boot-starter-web</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.jcodenest.initializer</groupId>
+                <artifactId>jcode-spring-boot-starter-security</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.github.xingfudeshi</groupId>
                 <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
@@ -278,7 +291,11 @@
             </dependency>
 
             <!-- ======================== RPC 远程调用相关 ======================== -->
-
+            <dependency>
+                <groupId>cn.jcodenest.initializer</groupId>
+                <artifactId>jcode-spring-boot-starter-rpc</artifactId>
+                <version>${revision}</version>
+            </dependency>
 
             <!-- ======================== Job 定时任务相关 ======================== -->
             <!-- XXL-JOB -->
