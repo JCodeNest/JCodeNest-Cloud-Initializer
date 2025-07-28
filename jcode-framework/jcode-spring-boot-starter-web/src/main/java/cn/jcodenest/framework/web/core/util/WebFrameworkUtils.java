@@ -8,8 +8,6 @@ import cn.jcodenest.framework.common.pojo.CommonResult;
 import cn.jcodenest.framework.web.config.WebProperties;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.http.HttpServletRequest;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -24,7 +22,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
  * Copyright (c) 2025 JCodeNest-Cloud-Initializer
  * All rights reserved.
  */
-@NoArgsConstructor(access =  AccessLevel.PRIVATE)
 public class WebFrameworkUtils {
 
     /**
@@ -63,6 +60,15 @@ public class WebFrameworkUtils {
      * 自定义 Web 属性配置类
      */
     private static WebProperties properties;
+
+    /**
+     * 初始化
+     *
+     * @param webProperties 自定义 Web 属性配置类
+     */
+    public WebFrameworkUtils(WebProperties webProperties) {
+        WebFrameworkUtils.properties = webProperties;
+    }
 
     /**
      * 从请求中获取租户编号

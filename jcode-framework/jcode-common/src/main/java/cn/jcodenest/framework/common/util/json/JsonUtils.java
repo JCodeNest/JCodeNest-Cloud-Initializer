@@ -10,8 +10,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
@@ -32,7 +30,6 @@ import java.util.List;
  * All rights reserved.
  */
 @Slf4j
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class JsonUtils {
 
     /**
