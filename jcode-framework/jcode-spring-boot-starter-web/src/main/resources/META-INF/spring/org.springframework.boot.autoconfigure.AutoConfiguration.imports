@@ -1,4 +1,6 @@
-cn.jcodenest.framework.banner.config.JCodeBannerAutoConfiguration
+cn.jcodenest.framework.apilog.config.JCodeApiLogAutoConfiguration
 cn.jcodenest.framework.jackson.config.JCodeJacksonAutoConfiguration
-cn.jcodenest.framework.web.config.JCodeWebAutoConfiguration
 cn.jcodenest.framework.swagger.config.JCodeSwaggerAutoConfiguration
+cn.jcodenest.framework.web.config.JCodeWebAutoConfiguration
+cn.jcodenest.framework.apilog.config.JCodeApiLogRpcAutoConfiguration
+cn.jcodenest.framework.banner.config.JCodeBannerAutoConfiguration
