@@ -1,4 +1,4 @@
-package cn.jcodenest.initializer.common.util.encrypt;
+package cn.jcodenest.framework.rpc.common.util.encrypt;
 
 import cn.jcodenest.framework.common.util.encrypt.CryptoUtil;
 
