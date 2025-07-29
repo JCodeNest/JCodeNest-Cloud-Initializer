@@ -1,0 +1,50 @@
+package cn.jcodenest.framework.desensitize.core.slider.handler;
+
+import cn.jcodenest.framework.desensitize.core.slider.annotation.SliderDesensitize;
+
+/**
+ * {@link SliderDesensitize} 的脱敏处理器
+ *
+ * @author JCodeNest
+ * @version 1.0.0
+ * @since 2025/7/29
+ * <p>
+ * Copyright (c) 2025 JCodeNest-Cloud-Initializer
+ * All rights reserved.
+ */
+public class DefaultDesensitizationHandler extends AbstractSliderDesensitizationHandler<SliderDesensitize> {
+
+    /**
+     * 前缀保留长度
+     *
+     * @param annotation 注解信息
+     * @return 前缀保留长度
+     */
+    @Override
+    Integer getPrefixKeep(SliderDesensitize annotation) {
+        return annotation.prefixKeep();
+    }
+
+    /**
+     * 后缀保留长度
+     *
+     * @param annotation 注解信息
+     * @return 后缀保留长度
+     */
+    @Override
+    Integer getSuffixKeep(SliderDesensitize annotation) {
+        return annotation.suffixKeep();
+    }
+
+    /**
+     * 替换符
+     *
+     * @param annotation 注解信息
+     * @return 替换符
+     */
+    @Override
+    String getReplacer(SliderDesensitize annotation) {
+        return annotation.replacer();
+    }
+
+}
