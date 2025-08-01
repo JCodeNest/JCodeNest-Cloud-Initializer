@@ -31,6 +31,7 @@
     <modules>
         <module>jcode-dependencies</module>
         <module>jcode-framework</module>
+        <module>jcode-module-infra</module>
     </modules>
 
     <dependencyManagement>

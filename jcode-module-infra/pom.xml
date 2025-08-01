@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.jcodenest.initializer</groupId>
+        <artifactId>JCodeNest-Cloud-Initializer</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>jcode-module-infra</artifactId>
+    <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        infra 模块主要提供两块能力：
+        1. 基础设施的运维与管理，支撑上层的通用与核心业务。 例如定时任务的管理、服务器的信息等等。
+        2. 研发工具，提升研发效率与质量。 例如代码生成器、接口文档等等。
+    </description>
+
+    <modules>
+        <module>jcode-module-infra-api</module>
+        <module>jcode-module-infra-server</module>
+    </modules>
+</project>

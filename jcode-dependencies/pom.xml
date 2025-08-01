@@ -190,6 +190,12 @@
 
 
             <!-- ======================== DB 相关 ======================== -->
+            <!-- JCode MyBatis: 数据库访问 -->
+            <dependency>
+                <groupId>cn.jcodenest.initializer</groupId>
+                <artifactId>jcode-spring-boot-starter-mybatis</artifactId>
+                <version>${revision}</version>
+            </dependency>
 
             <!-- Druid 数据库连接池 -->
             <dependency>
@@ -256,6 +262,13 @@
                 <groupId>com.fhs-opensource</groupId>
                 <artifactId>easy-trans-anno</artifactId>
                 <version>${easy-trans.version}</version>
+            </dependency>
+
+            <!-- JCode Redis: Redis 访问 -->
+            <dependency>
+                <groupId>cn.jcodenest.initializer</groupId>
+                <artifactId>jcode-spring-boot-starter-redis</artifactId>
+                <version>${revision}</version>
             </dependency>
 
             <!-- Redisson 分布式锁 -->
