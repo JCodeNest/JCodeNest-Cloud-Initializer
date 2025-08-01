@@ -1,0 +1,5 @@
+cn.jcodenest.framework.security.config.JCodeSecurityRpcAutoConfiguration
+cn.jcodenest.framework.security.config.JCodeSecurityAutoConfiguration
+cn.jcodenest.framework.security.config.JCodeWebSecurityConfigurerAdapter
+cn.jcodenest.framework.operatelog.config.JCodeOperateLogConfiguration
+cn.jcodenest.framework.operatelog.config.JCodeOperateLogRpcAutoConfiguration
