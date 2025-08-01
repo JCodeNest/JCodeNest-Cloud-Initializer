@@ -1,0 +1,3 @@
+cn.jcodenest.framework.datasource.config.JCodeDataSourceAutoConfiguration
+cn.jcodenest.framework.mybatis.config.JCodeMybatisAutoConfiguration
+cn.jcodenest.framework.translate.config.JCodeTranslateAutoConfiguration
