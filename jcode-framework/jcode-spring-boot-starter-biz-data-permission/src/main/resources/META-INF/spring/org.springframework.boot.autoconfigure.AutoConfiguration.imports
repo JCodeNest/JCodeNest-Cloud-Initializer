@@ -1,0 +1,3 @@
+cn.jcodenest.framework.datapermission.config.JCodeDataPermissionAutoConfiguration
+cn.jcodenest.framework.datapermission.config.JCodeDataPermissionRpcAutoConfiguration
+cn.jcodenest.framework.datapermission.config.JCodeDeptDataPermissionAutoConfiguration
