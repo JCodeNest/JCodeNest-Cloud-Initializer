@@ -34,5 +34,6 @@
         <module>jcode-spring-boot-starter-monitor</module>
         <module>jcode-spring-boot-starter-job</module>
         <module>jcode-spring-boot-starter-biz-ip</module>
+        <module>jcode-spring-boot-starter-protection</module>
     </modules>
 </project>
