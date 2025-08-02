@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.jcodenest.initializer</groupId>
+        <artifactId>jcode-framework</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>jcode-spring-boot-starter-websocket</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>WebSocket 框架，支持多节点的广播</description>
+
+    <dependencies>
+        <!-- 通用模块 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-common</artifactId>
+        </dependency>
+
+        <!-- JCode Security 模块
+            问题：为什么是 websocket 依赖 security 而不是 security 拓展 websocket 呢？
+            回答：因为 websocket 和 LoginUser 当前登录的用户有一定的相关性，具体可见 WebSocketSessionManagerImpl 逻辑。
+                 如果让 security 拓展 websocket 会导致 websocket 组件的封装很散，进而增大理解成本。
+         -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Websocket -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
+        <!-- MQ 模块 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-mq</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.amqp</groupId>
+            <artifactId>spring-rabbit</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 多租户模块
+            问题：为什么要依赖 tenant 组件？
+            回答：因为广播某个类型的用户时候，需要根据租户过滤下，避免广播到别的租户。
+         -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-biz-tenant</artifactId>
+        </dependency>
+    </dependencies>
+</project>

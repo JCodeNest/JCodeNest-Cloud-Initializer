@@ -158,6 +158,13 @@
                 <version>${revision}</version>
             </dependency>
 
+            <!-- 多租户模块 -->
+            <dependency>
+                <groupId>cn.jcodenest.initializer</groupId>
+                <artifactId>jcode-spring-boot-starter-biz-tenant</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
             <!-- ======================== Spring 相关 ======================== -->
             <!-- Spring Boot 配置处理 -->
             <dependency>
