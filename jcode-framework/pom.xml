@@ -36,5 +36,6 @@
         <module>jcode-spring-boot-starter-biz-ip</module>
         <module>jcode-spring-boot-starter-protection</module>
         <module>jcode-spring-boot-starter-mq</module>
+        <module>jcode-spring-boot-starter-excel</module>
     </modules>
 </project>
