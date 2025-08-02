@@ -3,6 +3,7 @@ package cn.jcodenest.framework.common.biz.system.dict.dto;
 import cn.jcodenest.framework.common.enums.CommonStatusEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * 字典数据响应 DTO
@@ -15,6 +16,7 @@ import lombok.Data;
  * All rights reserved.
  */
 @Data
+@Accessors(chain = true)
 @Schema(description = "RPC 服务 - 字典数据 Response DTO")
 public class DictDataRespDTO {
 
