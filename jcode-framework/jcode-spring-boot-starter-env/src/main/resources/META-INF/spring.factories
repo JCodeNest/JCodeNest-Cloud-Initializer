@@ -1,0 +1,2 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  cn.jcodenest.framework.env.config.EnvEnvironmentPostProcessor

@@ -29,5 +29,6 @@
         <module>jcode-spring-boot-starter-web</module>
         <module>jcode-spring-boot-starter-rpc</module>
         <module>jcode-spring-boot-starter-redis</module>
+        <module>jcode-spring-boot-starter-env</module>
     </modules>
 </project>
