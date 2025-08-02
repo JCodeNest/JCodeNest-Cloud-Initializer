@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.jcodenest.initializer</groupId>
+        <artifactId>jcode-framework</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>jcode-spring-boot-starter-biz-tenant</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>多租户</description>
+
+    <dependencies>
+        <!-- 通用模块 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-common</artifactId>
+        </dependency>
+
+        <!-- JCode Security 模块 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- JCode MyBatis 模块 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-mybatis</artifactId>
+        </dependency>
+
+        <!-- JCode Redis 模块 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-redis</artifactId>
+        </dependency>
+
+        <!-- JCode RPC 模块 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-rpc</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- JCode Job 模块 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-job</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- JCode MQ 模块 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-mq</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Kafka、RabbitMQ、RocketMQ -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.amqp</groupId>
+            <artifactId>spring-rabbit</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Google Guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <!-- Spring Boot 测试 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

@@ -319,6 +319,13 @@
             </dependency>
 
             <!-- ======================== Job 定时任务相关 ======================== -->
+            <!-- JCode Job 模块 -->
+            <dependency>
+                <groupId>cn.jcodenest.initializer</groupId>
+                <artifactId>jcode-spring-boot-starter-job</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
             <!-- XXL-JOB -->
             <dependency>
                 <groupId>com.xuxueli</groupId>
@@ -328,6 +335,13 @@
 
 
             <!-- ======================== 消息队列相关 ======================== -->
+            <!-- JCode MQ 模块 -->
+            <dependency>
+                <groupId>cn.jcodenest.initializer</groupId>
+                <artifactId>jcode-spring-boot-starter-mq</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
             <!-- RocketMQ -->
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>

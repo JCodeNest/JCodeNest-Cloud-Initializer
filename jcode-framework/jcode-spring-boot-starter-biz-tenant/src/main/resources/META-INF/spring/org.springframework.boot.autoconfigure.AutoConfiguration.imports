@@ -1,0 +1,2 @@
+cn.jcodenest.framework.tenant.config.JCodeTenantAutoConfiguration
+cn.jcodenest.framework.tenant.config.JCodeTenantRpcAutoConfiguration
