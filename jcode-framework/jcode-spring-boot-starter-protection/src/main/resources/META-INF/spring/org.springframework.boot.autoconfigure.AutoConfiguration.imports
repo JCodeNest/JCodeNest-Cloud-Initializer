@@ -1,2 +1,3 @@
 cn.jcodenest.framework.lock4j.config.JCodeLock4jConfiguration
 cn.jcodenest.framework.ratelimiter.config.JCodeRateLimiterConfiguration
+cn.jcodenest.framework.idempotent.config.JCodeIdempotentConfiguration
