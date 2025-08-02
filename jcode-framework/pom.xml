@@ -31,5 +31,6 @@
         <module>jcode-spring-boot-starter-redis</module>
         <module>jcode-spring-boot-starter-env</module>
         <module>jcode-spring-boot-starter-test</module>
+        <module>jcode-spring-boot-starter-monitor</module>
     </modules>
 </project>
