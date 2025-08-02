@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.jcodenest.initializer</groupId>
+        <artifactId>jcode-framework</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>jcode-spring-boot-starter-test</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>测试组件，用于单元测试、集成测试</description>
+
+    <dependencies>
+        <!-- 通用基础定义 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-common</artifactId>
+        </dependency>
+
+        <!-- JCode MyBatis: 数据库访问 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-mybatis</artifactId>
+        </dependency>
+
+        <!-- JCode Redis: Redis 访问 -->
+        <dependency>
+            <groupId>cn.jcodenest.initializer</groupId>
+            <artifactId>jcode-spring-boot-starter-redis</artifactId>
+        </dependency>
+
+        <!-- Test -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+
+        <!-- H2 内存数据库 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+
+        <!-- Redis Mock -->
+        <dependency>
+            <groupId>com.github.fppt</groupId>
+            <artifactId>jedis-mock</artifactId>
+        </dependency>
+
+        <!-- 随机生成 POJO 类 -->
+        <dependency>
+            <groupId>uk.co.jemos.podam</groupId>
+            <artifactId>podam</artifactId>
+        </dependency>
+    </dependencies>
+</project>
