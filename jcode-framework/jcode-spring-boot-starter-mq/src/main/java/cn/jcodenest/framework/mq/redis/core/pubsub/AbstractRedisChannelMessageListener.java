@@ -1,0 +1,130 @@
+package cn.jcodenest.framework.mq.redis.core.pubsub;
+
+import cn.hutool.core.util.TypeUtil;
+import cn.jcodenest.framework.common.util.json.JsonUtils;
+import cn.jcodenest.framework.mq.redis.core.RedisMQTemplate;
+import cn.jcodenest.framework.mq.redis.core.interceptor.RedisMessageInterceptor;
+import cn.jcodenest.framework.mq.redis.core.message.AbstractRedisMessage;
+import lombok.Setter;
+import lombok.SneakyThrows;
+import org.springframework.data.redis.connection.Message;
+import org.springframework.data.redis.connection.MessageListener;
+
+import java.lang.reflect.Type;
+import java.util.List;
+
+/**
+ * Redis Pub/Sub 监听器抽象类，用于实现广播消费
+ *
+ * @param <T> 消息类型，一定要填写，不然会报错
+ * @author JCodeNest
+ * @version 1.0.0
+ * @since 2025/8/2
+ * <p>
+ * Copyright (c) 2025 JCodeNest-Cloud-Initializer
+ * All rights reserved.
+ */
+public abstract class AbstractRedisChannelMessageListener<T extends AbstractRedisChannelMessage> implements MessageListener {
+
+    /**
+     * 消息类型
+     */
+    private final Class<T> messageType;
+
+    /**
+     * Redis Channel
+     */
+    private final String channel;
+
+    /**
+     * RedisMQTemplate
+     */
+    @Setter
+    private RedisMQTemplate redisMQTemplate;
+
+    /**
+     * 默认构造器
+     */
+    @SneakyThrows
+    protected AbstractRedisChannelMessageListener() {
+        this.messageType = getMessageClass();
+        this.channel = messageType.getDeclaredConstructor().newInstance().getChannel();
+    }
+
+    /**
+     * 获取 Sub 订阅的 Redis Channel 通道
+     *
+     * @return channel
+     */
+    public final String getChannel() {
+        return channel;
+    }
+
+    /**
+     * 接收到消息时，会调用此方法
+     *
+     * @param message 消息
+     * @param pattern 模式
+     */
+    @Override
+    public void onMessage(Message message, byte[] pattern) {
+        // 消息
+        T messageObj = JsonUtils.parseObject(message.getBody(), messageType);
+        try {
+            // 消费消息之前调用拦截器
+            consumeMessageBefore(messageObj);
+            // 消费消息
+            this.onMessage(messageObj);
+        } finally {
+            // 消费消息之后调用拦截器
+            consumeMessageAfter(messageObj);
+        }
+    }
+
+    /**
+     * 处理消息
+     *
+     * @param message 消息
+     */
+    public abstract void onMessage(T message);
+
+    /**
+     * 通过解析类上的泛型，获得消息类型
+     *
+     * @return 消息类型
+     */
+    @SuppressWarnings("unchecked")
+    private Class<T> getMessageClass() {
+        Type type = TypeUtil.getTypeArgument(getClass(), 0);
+        if (type == null) {
+            throw new IllegalStateException(String.format("类型(%s) 需要设置消息类型", getClass().getName()));
+        }
+        return (Class<T>) type;
+    }
+
+    /**
+     * 消费消息之前调用拦截器
+     *
+     * @param message 消息
+     */
+    private void consumeMessageBefore(AbstractRedisMessage message) {
+        assert redisMQTemplate != null;
+        List<RedisMessageInterceptor> interceptors = redisMQTemplate.getInterceptors();
+        // 正序处理拦截器
+        interceptors.forEach(interceptor -> interceptor.consumeMessageBefore(message));
+    }
+
+    /**
+     * 消费消息之后调用拦截器
+     *
+     * @param message 消息
+     */
+    private void consumeMessageAfter(AbstractRedisMessage message) {
+        assert redisMQTemplate != null;
+        List<RedisMessageInterceptor> interceptors = redisMQTemplate.getInterceptors();
+        // 倒序处理拦截器
+        for (int i = interceptors.size() - 1; i >= 0; i--) {
+            interceptors.get(i).consumeMessageAfter(message);
+        }
+    }
+}

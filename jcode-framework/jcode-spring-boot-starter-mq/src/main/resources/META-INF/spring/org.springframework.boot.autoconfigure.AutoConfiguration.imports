@@ -1,0 +1,3 @@
+cn.jcodenest.framework.mq.rabbitmq.config.JCodeRabbitMQAutoConfiguration
+cn.jcodenest.framework.mq.redis.config.JCodeRedisMQConsumerAutoConfiguration
+cn.jcodenest.framework.mq.redis.config.JCodeRedisMQProducerAutoConfiguration
