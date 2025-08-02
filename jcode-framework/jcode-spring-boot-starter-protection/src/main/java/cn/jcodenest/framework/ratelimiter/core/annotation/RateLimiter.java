@@ -1,6 +1,7 @@
 package cn.jcodenest.framework.ratelimiter.core.annotation;
 
 import cn.jcodenest.framework.common.exception.enums.GlobalErrorCodeConstants;
+import cn.jcodenest.framework.idempotent.core.keyresolver.impl.ExpressionIdempotentKeyResolver;
 import cn.jcodenest.framework.ratelimiter.core.keyresolver.RateLimiterKeyResolver;
 import cn.jcodenest.framework.ratelimiter.core.keyresolver.impl.ClientIpRateLimiterKeyResolver;
 import cn.jcodenest.framework.ratelimiter.core.keyresolver.impl.DefaultRateLimiterKeyResolver;
